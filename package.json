@@ -1,0 +1,29 @@
+{
+  "name": "lovelytdd",
+  "version": "1.0.0",
+  "description": "Lovely-TDD",
+  "author": "Lovely-TDD",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:packager": "yarn workspace @lovelytdd/native start",
+    "start:web": "yarn workspace @lovelytdd/web start",
+    "start:ios": "yarn workspace @lovelytdd/native ios",
+    "start:android": "yarn workspace @lovelytdd/native android",
+    "test:web": "yarn workspace @lovelytdd/web test",
+    "test:native": "yarn workspace @lovelytdd/native test"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "@react-native-community/async-storage",
+      "react-native",
+      "react-native/**",
+      "react-native-dev-menu",
+      "react-native-svg",
+      "jetifier"
+    ]
+  }
+}
